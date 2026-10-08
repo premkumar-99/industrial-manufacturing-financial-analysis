@@ -1,0 +1,28 @@
+-- POWER BI DAX MEASURES
+
+Total Revenue = SUM(Sales_Orders[Revenue])
+Total COGS = SUM(Sales_Orders[Total_COGS])
+Gross Profit = [Total Revenue] - [Total COGS]
+Gross Margin % = DIVIDE([Gross Profit], [Total Revenue])
+Material Cost = SUM(Sales_Orders[Material_Cost])
+Labour Cost = SUM(Sales_Orders[Labour_Cost])
+Manufacturing Overhead = SUM(Sales_Orders[Overhead])
+
+Completed Order Value =
+CALCULATE([Total Revenue], Sales_Orders[Status] = "Completed")
+
+Open Order Value =
+CALCULATE([Total Revenue], Sales_Orders[Status] <> "Completed")
+
+Outstanding Revenue =
+CALCULATE([Total Revenue], Sales_Orders[Payment_Status] = "Outstanding")
+
+Order Count = DISTINCTCOUNT(Sales_Orders[SO_Number])
+Average Order Value = DIVIDE([Total Revenue], [Order Count])
+Revenue per Machine = DIVIDE([Total Revenue], SUM(Sales_Orders[Qty]))
+
+Low Margin Revenue =
+CALCULATE([Total Revenue], Sales_Orders[Gross_Margin] < 0.25)
+
+Calendar =
+CALENDAR(MIN(Sales_Orders[SO_Date]), MAX(Sales_Orders[SO_Date]))

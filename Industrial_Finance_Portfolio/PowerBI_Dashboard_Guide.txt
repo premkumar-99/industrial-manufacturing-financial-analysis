@@ -1,0 +1,19 @@
+POWER BI DASHBOARD BUILD GUIDE
+
+PAGE 1 — Executive Finance
+Cards: Revenue, Gross Profit, Gross Margin %, Open Order Value, Outstanding Revenue, Order Count.
+Charts: Monthly Revenue, Monthly Gross Margin, Revenue by Model, Order Status by Value.
+
+PAGE 2 — Product Profitability
+Charts: Revenue by Model, Gross Profit by Model, Gross Margin % by Model, Units by Model, Revenue vs Gross Margin.
+
+PAGE 3 — Customer Profitability
+Charts: Customer Revenue Ranking, Customer Gross Profit Ranking, Customer Margin, Outstanding Revenue by Customer.
+
+PAGE 4 — Working Capital
+Cards/charts: Raw Material Inventory, WIP, Finished Goods, Receivables, Payables, Net Working Capital, Credit-Day Exposure.
+
+PAGE 5 — Scenario Analysis
+Base, Material +5%, Material +10%, Selling Price +5%, Combined Price/Cost scenario.
+
+Recommended slicers: Date, Model, Customer, Sales Owner, Status, Payment Status.
